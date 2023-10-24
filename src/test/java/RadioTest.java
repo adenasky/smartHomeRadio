@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class RadioTest {
     @Test
     public void changeStationToNextFromMaxAllowed() { //Текущая радиостанция максимальная => кнопка next => текущая 0
-        Radio service = new Radio(54);
+        Radio service = new Radio(54, 0, 0);
         service.setCurrentStation(53);
 
         service.next();
@@ -45,7 +45,7 @@ class RadioTest {
 
     @Test
     public void changeStationToPrevFromZeroToMaxAllowed() { //Текущая радиостанция 0 => кнопка prev => текущая максимальная
-        Radio service = new Radio(30);
+        Radio service = new Radio(30,0,0);
         service.setCurrentStation(0);
 
         service.prev();
